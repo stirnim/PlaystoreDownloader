@@ -130,6 +130,7 @@ class Playstore(object):
             "source": "android",
             "device_country": self.lang,
             "lang": self.lang,
+            "sdk_version": "16",
         }
 
         response = requests.post(self.LOGIN_URL, data=params, verify=True)
