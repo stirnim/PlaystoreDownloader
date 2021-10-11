@@ -116,7 +116,6 @@ def main():
                 re.sub(
                     r"[^\w\-_.\s]",
                     "_",
-                    f"{details['title']} by {details['creator']} - "
                     f"{details['package_name']}.apk",
                 ),
             )
@@ -134,7 +133,7 @@ def main():
             stripped_tag = args.tag.strip(" '\"")
             downloaded_apk_file_path = os.path.join(
                 os.path.dirname(downloaded_apk_file_path),
-                f"[{stripped_tag}] {os.path.basename(downloaded_apk_file_path)}",
+                f"{stripped_tag}_{os.path.basename(downloaded_apk_file_path)}",
             )
 
         # The download of the additional files is optional.
